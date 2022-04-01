@@ -1,0 +1,39 @@
+package: school 
+version: '0.0.1-dev' 
+author: 'Alexander Walther'
+supportpage: https://github.com/alexplusde/school
+
+requires:
+    php:
+        version: '>7.3,<9'
+    redaxo: ^5.13
+    packages:
+        yform: ">4"
+        yform_spam_protection: ">=2"
+        events: ">=3"
+        neues: ">=3"
+        plus_bs5: ">0"
+        yrewrite: ">=2"
+        yrewrite_metainfo: ">0"
+
+page:
+    title: translate:school_title
+    icon: rex-icon fa-gear
+    block: system
+    prio: 11
+
+pages:
+    settings:
+        title: translate:school_settings
+        icon: rex-icon fa-gear
+        itemclass: pull-right
+        perm: admin
+    docs:
+        title: translate:school_docs
+        subPath: README.md 
+        icon: rex-icon fa-info-circle
+        itemclass: pull-right
+        perm: school[docs]
+
+default_config:
+#    field: 'Test' 
