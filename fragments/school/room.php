@@ -1,0 +1,28 @@
+<!-- fragments/school/room.php -->
+<section class="school-room">
+    <div
+        class="container <?= rex_config::get("plus_bs5", "container_class") ?>">
+        <?php
+
+use Url\Url;
+
+$manager = Url::resolveCurrent();
+
+if ($manager) {
+    $room = school_room::get($manager->getDatasetId());
+    if ($room) {
+        $this->setVar("room", $room);
+        $this->subfragment('school/room-details.php');
+    }
+} else {
+    $rooms = school_room::query()->find();
+    if ($rooms) {
+        $this->setVar("rooms", $rooms);
+        $this->subfragment('school/room-list.php');
+    }
+}
+
+?>
+    </div>
+</section>
+<!-- fragments/school/room.php -->
