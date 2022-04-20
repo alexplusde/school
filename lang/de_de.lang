@@ -1,1 +1,11 @@
-school_title: Schule
+school_title = Schule
+
+school_course = Klassen
+school_project = AGs und Gremien
+school_room = Räume 
+school_subject = Fächer
+school_team = Kollegium 
+school_team_tags = Kategorien
+
+school_settings = Einstellungen
+school_docs = Hilfe

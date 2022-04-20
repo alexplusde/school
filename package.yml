@@ -1,5 +1,5 @@
 package: school 
-version: '0.0.1-dev' 
+version: '0.0.2-dev' 
 author: 'Alexander Walther'
 supportpage: https://github.com/alexplusde/school
 
@@ -8,27 +8,49 @@ requires:
         version: '>7.3,<9'
     redaxo: ^5.13
     packages:
-        yform: ">4"
-        yform_spam_protection: ">=2"
-        events: ">=3"
-        neues: ">=3"
-        plus_bs5: ">0"
-        yrewrite: ">=2"
-        yrewrite_metainfo: ">0"
+        yform: "^4"
+        yform_spam_protection: ">=1"
+        events: ">2,<4"
+        plus_bs5: ">0,<2"
+        yrewrite: "^2"
+        yrewrite_metainfo: ">0,<2"
 
 page:
     title: translate:school_title
-    icon: rex-icon fa-gear
+    icon: rex-icon fa-user
     block: system
     prio: 11
+    perm: school
 
 pages:
-    settings:
+    school/course:
+        title: translate:school_course
+        perm: school['course']
+    school/project:
+        title: translate:school_project
+        perm: school['project']
+    school/room:
+        title: translate:school_room
+        perm: school['room']
+    school/subject:
+        title: translate:school_subject
+        perm: school['subject']
+    school/team:
+        title: translate:school_team
+        perm: school['team']
+    school/team/team:
+        title: translate:school_team
+        perm: school['team']
+    school/team/team_tags:
+        title: translate:school_team_tags
+        perm: school['team']
+
+    school/settings:
         title: translate:school_settings
         icon: rex-icon fa-gear
         itemclass: pull-right
         perm: admin
-    docs:
+    school/docs:
         title: translate:school_docs
         subPath: README.md 
         icon: rex-icon fa-info-circle
