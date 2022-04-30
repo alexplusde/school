@@ -15,9 +15,9 @@ $events = $this->getVar('events');
         <tr>
             <td><?= $event->getTitle(); ?>
             </td>
-            <td><?= $event->getStartDate(); ?>
+            <td><?= $event->getFormattedStartDate(); ?>
             </td>
-            <td><?= $event->getStartTime(); ?>
+            <td><?= $event->getFormattedEndDate(); ?>
             </td>
             <td></td>
             <td><a href="<?= $event->getUrl(); ?>"
