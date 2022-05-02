@@ -28,8 +28,7 @@ rex_yform_manager_dataset::setModelClass(
     school_team_tags::class
 );
 
-
-if (rex::isBackend() && rex::isDebugMode()) {
+if (rex::isBackend() && rex::isDebugMode() && rex_config::get('school', 'dev')) {
     school::writeModule();
     school::writeTemplate();
 }

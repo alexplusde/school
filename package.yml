@@ -58,4 +58,4 @@ pages:
         perm: school[docs]
 
 default_config:
-#    field: 'Test' 
+    dev: 0 # Aktivieren, um Module und Templates ins Addon zu schreiben
