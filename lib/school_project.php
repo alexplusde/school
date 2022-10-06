@@ -43,7 +43,7 @@ class school_project extends \rex_yform_manager_dataset
     {
         return $this->getValue('images');
     }
-    public function getUrl()
+    public function getUrl($type = "")
     {
         if (rex_addon::get("yrewrite") && rex_addon::get("yrewrite")->isAvailable()) {
             $host = rex_yrewrite::getFullUrlByArticleId(rex_article::getCurrentId(), rex_clang::getCurrentId());
@@ -51,10 +51,10 @@ class school_project extends \rex_yform_manager_dataset
             $host = rtrim(rex::getServer(), '/').rex_getUrl(rex_article::getCurrentId(), rex_clang::getCurrentId());
         }
         
-        if ($this->gettype() == "ag") {
-            return  rex_getUrl('', '', ['project_ag-id' => $this->getId()]);
-        } elseif ($this->gettype == "smv") {
-            return  rex_getUrl('', '', ['project_smv-id' => $this->getId()]);
+        if ($type == "ag") {
+            return  rex_getUrl('', '', ['ag-id' => $this->getId()]);
+        } elseif ($type == "smv") {
+            return  rex_getUrl('', '', ['smv-id' => $this->getId()]);
         }
     }
 }

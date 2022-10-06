@@ -1,20 +1,20 @@
 <?php
 
 rex_yform_manager_dataset::setModelClass(
-    'rex_school_projects',
+    'rex_school_project',
     school_project::class
 );
 rex_yform_manager_dataset::setModelClass(
-    'rex_school_courses',
+    'rex_school_course',
     school_course::class
 );
 rex_yform_manager_dataset::setModelClass(
-    'rex_school_rooms',
+    'rex_school_room',
     school_room::class
 );
 
 rex_yform_manager_dataset::setModelClass(
-    'rex_school_subjects',
+    'rex_school_subject',
     school_subject::class
 );
 
@@ -72,7 +72,7 @@ if (rex::isBackend() && rex::isDebugMode() && rex_config::get('school', 'dev')) 
                         $url = $school_project->getUrl();
                     }
                     break;
-                }
+            }
             return $url;
         },
         $ep->getSubject()

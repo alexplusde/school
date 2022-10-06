@@ -7,6 +7,10 @@ class school_team extends \rex_yform_manager_dataset
     {
         return $this->getValue('title');
     }
+    public function getFullName()
+    {
+        return $this->getacademic_title() . " ". $this->getPrename() ." ". $this->getName();
+    }
     public function getgender()
     {
         return $this->getValue('gender');

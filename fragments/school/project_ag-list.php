@@ -3,27 +3,27 @@
 $projects = $this->getVar('projects_ag');
 ?>
 <table class="table">
-    <thead>
-        <th>Name</th>
-        <th>Treffzeit</th>
-        <th>Treffpunkt</th>
-        <th>Ansprechpartner</th>
-        <th>Details</th>
-        </th>
-    </thead>
-    <tbody>
-        <?php foreach ($projects as $project) { ?>
-        <tr>
-            <td><?= $project->getName(); ?>
-            </td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td><a href="<?= $project->getUrl(); ?>"
-                    class="btn btn-primary">Details</a></td>
-        </tr>
-        <?php } ?>
-    </tbody>
+	<thead>
+		<th>Name</th>
+		<th>Treffzeit</th>
+		<th>Treffpunkt</th>
+		<th>Ansprechpartner</th>
+		<th>Details</th>
+		</th>
+	</thead>
+	<tbody>
+		<?php foreach ($projects as $project) { ?>
+		<tr>
+			<td><?= $project->getName(); ?>
+			</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><a href="<?= $project->getUrl("ag"); ?>"
+					class="btn btn-primary">Details</a></td>
+		</tr>
+		<?php } ?>
+	</tbody>
 </table>
 <!-- fragments/school/project_ag-list.php -->

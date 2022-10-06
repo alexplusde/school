@@ -1,6 +1,6 @@
 <?php
 
-$table_name = 'rex_school_projects';
+$table_name = 'rex_school_project';
 
 \rex_extension::register(
     'YFORM_MANAGER_DATA_PAGE_HEADER',
