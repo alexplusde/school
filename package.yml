@@ -10,40 +10,50 @@ requires:
     packages:
         yform: "^4"
         yform_spam_protection: ">=1"
-        events: ">2,<4"
-        plus_bs5: ">0,<2"
-        yrewrite: "^2"
-        yrewrite_metainfo: ">0,<2"
+        events: ">5,<6"
+        yrewrite: ">=2"
+        yrewrite_metainfo: "<3"
 
 page:
     title: translate:school_title
-    icon: rex-icon fa-user
+    icon: rex-icon fa-university
     block: system
     prio: 11
     perm: school
 
 pages:
+    school/inbox:
+        title: translate:school_inbox
+        perm: school['inbox']
+        icon: rex-icon fa-envelope-o
     school/course:
         title: translate:school_course
         perm: school['course']
+        icon: rex-icon fa-users
     school/project:
         title: translate:school_project
         perm: school['project']
+        icon: rex-icon fa-table
     school/room:
         title: translate:school_room
         perm: school['room']
+        icon: rex-icon fa-table
     school/subject:
         title: translate:school_subject
         perm: school['subject']
+        icon: rex-icon fa-table
     school/team:
         title: translate:school_team
         perm: school['team']
+        icon: rex-icon fa-user-o
     school/team/team:
         title: translate:school_team
         perm: school['team']
+        icon: rex-icon fa-user-o
     school/team/team_tags:
         title: translate:school_team_tags
         perm: school['team']
+        icon: rex-icon fa-vcard-o
 
     school/settings:
         title: translate:school_settings

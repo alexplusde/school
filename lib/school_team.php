@@ -3,17 +3,25 @@
 
 class school_team extends \rex_yform_manager_dataset
 {
-    public function gettitle()
+    public function getTitle()
     {
         return $this->getValue('title');
     }
     public function getFullName()
     {
-        return $this->getacademic_title() . " ". $this->getPrename() ." ". $this->getName();
+        if (strlen($this->getPrename() > 0)) {
+            return $this->getacademic_title() . " ". substr($this->getPrename(), 0, 1) .". ". $this->getName();
+        }
+        return $this->getacademic_title() . " ". $this->getName();
     }
-    public function getgender()
+    public function getAnrede()
     {
-        return $this->getValue('gender');
+        if ($this->getValue('gender') == "m") {
+            return "Herr";
+        } elseif ($this->getValue('gender') == "w") {
+            return "Frau";
+        }
+        return "";
     }
     public function getstatus()
     {
@@ -31,7 +39,7 @@ class school_team extends \rex_yform_manager_dataset
     {
         return $this->getValue('name');
     }
-    public function getkuerzel()
+    public function getKuerzel()
     {
         return $this->getValue('kuerzel');
     }
@@ -47,7 +55,7 @@ class school_team extends \rex_yform_manager_dataset
     {
         return $this->getValue('is_teacher');
     }
-    public function getemail()
+    public function getEmail()
     {
         return $this->getValue('email');
     }

@@ -3,11 +3,11 @@
 
 class school_room extends \rex_yform_manager_dataset
 {
-    public function getname()
+    public function getName()
     {
         return $this->getValue('name');
     }
-    public function gettitle()
+    public function getTitle()
     {
         return $this->getValue('title');
     }

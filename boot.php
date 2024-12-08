@@ -78,3 +78,12 @@ if (rex::isBackend() && rex::isDebugMode() && rex_config::get('school', 'dev')) 
         $ep->getSubject()
     );
 }, rex_extension::NORMAL);
+
+
+if (rex::isBackend() && strpos(rex_be_controller::getCurrentPage(), "school") !== false || rex_be_controller::getCurrentPage() == "yform/manager/data_edit" || rex_be_controller::getCurrentPage() == "global_settings/settings") {
+    rex_extension::register('OUTPUT_FILTER', function (rex_extension_point $ep) {
+        $suchmuster = 'class="###school-settings-editor###"';
+        $ersetzen = rex_config::get("school", "editor");
+        $ep->setSubject(str_replace($suchmuster, $ersetzen, $ep->getSubject()));
+    });
+}
