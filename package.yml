@@ -1,22 +1,22 @@
 package: school 
-version: '0.0.2-dev' 
+version: '0.0.3-dev' 
 author: 'Alexander Walther'
 supportpage: https://github.com/alexplusde/school
 
 requires:
     php:
-        version: '>7.3,<9'
-    redaxo: ^5.13
+        version: '>8.3,<9'
+    redaxo: ^5.18
     packages:
         yform: "^4"
         yform_spam_protection: ">=1"
-        events: ">5,<6"
-        yrewrite: ">=2"
+        events: ">=5,<7"
+        yrewrite: ">=2,<3"
         yrewrite_metainfo: "<3"
 
 page:
     title: translate:school_title
-    icon: rex-icon fa-university
+    icon: rex-icon fa-school
     block: system
     prio: 11
     perm: school
@@ -37,7 +37,7 @@ pages:
     school/room:
         title: translate:school_room
         perm: school['room']
-        icon: rex-icon fa-table
+        icon: rex-icon fa-door-open
     school/subject:
         title: translate:school_subject
         perm: school['subject']

@@ -10,3 +10,18 @@ school_team_tags = Kategorien
 
 school_settings = Einstellungen
 school_docs = Hilfe
+
+
+# Allgemeine Table Manager Feld-Bezeichnungen
+
+school.table.preview_link = Vorschau
+school.table.status.online = 🟢Online
+school.table.status.offline = ⭕ Offline
+
+school.table.team.status.offline = ❌ verweigert
+school.table.team.status.online = 🟢 genehmigt
+
+school.table.createdate = Erstellt am
+school.table.updatedate = Geändert am
+school.table.createuser = Erstellt von
+school.table.updateuser = Geändert von

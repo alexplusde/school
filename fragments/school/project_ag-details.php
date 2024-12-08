@@ -16,11 +16,11 @@ dump($project);
 			<h2>Treffzeiten</h2>
 			<?= $project->text_date ?>;
 			<h2>Betreuung durch</h2>
-			<?= school_team::get($project->teacher_ids)->getFullName(); ?>;
+			<?= Team::get($project->teacher_ids)->getFullName(); ?>;
 		</div>
 		<div class="">
 			<h2>Raum</h2>
-			<?= school_room::get($project->room_id)->getName(); ?>;
+			<?= Room::get($project->room_id)->getName(); ?>;
 		</div>
 
 	</div>

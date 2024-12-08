@@ -9,13 +9,13 @@ use Url\Url;
 $manager = Url::resolveCurrent();
 
 if ($manager) {
-    $person = school_team::get($manager->getDatasetId());
+    $person = Team::get($manager->getDatasetId());
     if ($person) {
         $this->setVar("person", $person);
         $this->subfragment('school/team-details.php');
     }
 } else {
-    $team = school_team::query()->find();
+    $team = Team::query()->find();
     if ($team) {
         $this->setVar("team", $team);
         $this->subfragment('school/team-list.php');

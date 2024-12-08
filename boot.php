@@ -1,36 +1,45 @@
 <?php
 
+namespace Alexplusde\School;
+
+use rex_yform_manager_dataset;
+use rex_config;
+use rex;
+use rex_extension;
+use rex_extension_point;
+use rex_be_controller;
+
 rex_yform_manager_dataset::setModelClass(
     'rex_school_project',
-    school_project::class
+    Project::class
 );
 rex_yform_manager_dataset::setModelClass(
     'rex_school_course',
-    school_course::class
+    Course::class
 );
 rex_yform_manager_dataset::setModelClass(
     'rex_school_room',
-    school_room::class
+    Room::class
 );
 
 rex_yform_manager_dataset::setModelClass(
     'rex_school_subject',
-    school_subject::class
+    Subject::class
 );
 
 rex_yform_manager_dataset::setModelClass(
     'rex_school_team',
-    school_team::class
+    Team::class
 );
 
 rex_yform_manager_dataset::setModelClass(
     'rex_school_team_tags',
-    school_team_tags::class
+    TeamTag::class
 );
 
 if (rex::isBackend() && rex::isDebugMode() && rex_config::get('school', 'dev')) {
-    school::writeModule();
-    school::writeTemplate();
+    School::writeModule();
+    School::writeTemplate();
 }
 
 
@@ -49,25 +58,25 @@ if (rex::isBackend() && rex::isDebugMode() && rex_config::get('school', 'dev')) 
                     }
                     break;
                 case 'rex-event-date':
-                    $event_date = event_date::get($matches[3]);
+                    $event_date = \event_date::get($matches[3]);
                     if ($event_date) {
                         $url = $event_date->getUrl();
                     }
                     break;
                 case 'rex-event-category':
-                    $event_category = event_category::get($matches[3]);
+                    $event_category = \event_category::get($matches[3]);
                     if ($event_category) {
                         $url = $event_category->getUrl();
                     }
                     break;
                 case 'rex-school-course':
-                    $school_course = school_course::get($matches[3]);
+                    $school_course = Course::get($matches[3]);
                     if ($school_course) {
                         $url = $school_course->getUrl();
                     }
                     break;
                 case 'rex-school-projects':
-                    $school_project = school_project::get($matches[3]);
+                    $school_project = Project::get($matches[3]);
                     if ($school_project) {
                         $url = $school_project->getUrl();
                     }

@@ -1,4 +1,6 @@
 <?php
 
-school::updateModule();
-school::updateTemplate();
+namespace Alexplusde\School;
+
+School::updateModule();
+School::updateTemplate();

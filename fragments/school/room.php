@@ -9,13 +9,13 @@ use Url\Url;
 $manager = Url::resolveCurrent();
 
 if ($manager) {
-    $room = school_room::get($manager->getDatasetId());
+    $room = Room::get($manager->getDatasetId());
     if ($room) {
         $this->setVar("room", $room);
         $this->subfragment('school/room-details.php');
     }
 } else {
-    $rooms = school_room::query()->find();
+    $rooms = Room::query()->find();
     if ($rooms) {
         $this->setVar("rooms", $rooms);
         $this->subfragment('school/room-list.php');
