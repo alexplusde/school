@@ -64,7 +64,7 @@ if (rex::isBackend() && rex::isDebugMode() && rex_config::get('school', 'dev')) 
                     }
                     break;
                 case 'rex-event-category':
-                    $event_category = \event_category::get($matches[3]);
+                    $event_category = Category::get($matches[3]);
                     if ($event_category) {
                         $url = $event_category->getUrl();
                     }

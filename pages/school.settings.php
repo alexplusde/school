@@ -8,6 +8,11 @@ $field = $form->addInputField('text', 'editor', null, ['class' => 'form-control'
 $field->setLabel(rex_i18n::msg('school_editor'));
 $field->setNotice('z.B. <code>class="form-control redactor-editor--text"</code> oder <code>class="form-control cke5-editor" data-profile="default" data-lang="de"</code>');
 
+/* Standard-Profilbild */
+$field = $form->addMediaField('team_default_image');
+$field->setLabel(rex_i18n::msg('school.team.default_image'));
+$field->setNotice(rex_i18n::msg('school.team.default_image.notice'));
+
 $fragment = new rex_fragment();
 $fragment->setVar('class', 'edit', false);
 $fragment->setVar('title', $addon->i18n('school_settings'), false);

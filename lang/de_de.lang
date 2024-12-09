@@ -25,3 +25,6 @@ school.table.createdate = Erstellt am
 school.table.updatedate = Geändert am
 school.table.createuser = Erstellt von
 school.table.updateuser = Geändert von
+
+school.team.default_image = Standardbild
+school.team.default_image.notice = Wird angezeigt, wenn kein Bild vorhanden ist.
