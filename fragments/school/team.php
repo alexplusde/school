@@ -1,11 +1,14 @@
+<?php
+
+use Alexplusde\School\Team;
+use Url\Url;
+
+?>
 <!-- fragments/school/team.php -->
 <section class="school-team">
     <div
         class="container <?= rex_config::get("plus_bs5", "container_class") ?>">
-        <?php
-
-use Url\Url;
-
+<?php
 $manager = Url::resolveCurrent();
 
 if ($manager) {

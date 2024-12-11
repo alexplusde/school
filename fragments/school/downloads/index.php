@@ -1,6 +1,6 @@
 <?php
 
-/** @var rex_fragment $this */
+/** @var Fragment $this */
 $filename = $this->getVar('file');
 $media = rex_media::get($filename);
 

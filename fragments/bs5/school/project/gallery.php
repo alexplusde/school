@@ -4,7 +4,7 @@ namespace Alexplusde\School;
 
 use rex_media_plus;
 
-/** @var \rex_fragment $this */
+/** @var \Fragment $this */
 $images = $this->getVar('images');
 /** @var array $images */
 ?>

@@ -2,7 +2,7 @@
 
 namespace Alexplusde\School;
 
-/** @var \rex_fragment $this */
+/** @var \Fragment $this */
 /** @var Project $project */
 $project = $this->getVar('project');
 ?>

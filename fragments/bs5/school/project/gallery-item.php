@@ -2,7 +2,7 @@
 
 namespace Alexplusde\School;
 
-/** @var \rex_fragment $this */
+/** @var \Fragment $this */
 $media = $this->getVar('media');
 /** @var rex_media_plus $media */
 ?>

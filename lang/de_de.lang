@@ -28,3 +28,17 @@ school.table.updateuser = Geändert von
 
 school.team.default_image = Standardbild
 school.team.default_image.notice = Wird angezeigt, wenn kein Bild vorhanden ist.
+
+
+# Modul-Bezeichnungen
+
+school.module.workgroup = 🎒 Arbeitsgemeinschaften
+school.module.workgroup.page = 🎒 Arbeitsgemeinschaften - Seite
+school.module.team.person = 🎒 Ansprechpartner:innen
+school.module.team.contact = 🎒 Kollegium (Kontaktformular)
+school.module.hierarchy = 🎒 Geschäftsverteilungsplan / Organigramm
+school.module.contact = 🎒 Kontakt aufnehmen
+school.module.contact.website_team = 🎒 Kontakt aufnehmen -  Website-Team
+school.module.teacher = 🎒 Lehrer:innen-Liste
+school.module.room  = 🎒 Raumplan
+school.module.subject = 🎒 Fächer

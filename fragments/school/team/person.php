@@ -2,7 +2,7 @@
 
 use Alexplusde\School\Team;
 
-/** @var rex_fragment $this  */
+/** @var Fragment $this  */
 /** @var Team $person */
 $person = $this->getVar('person');
 /** @var rex_media_plus $media */
