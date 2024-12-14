@@ -2,6 +2,7 @@
 
 namespace Alexplusde\School;
 
+use Alexplusde\BS5\Helper;
 use rex_yform_manager_dataset;
 use rex_config;
 use rex;
@@ -37,9 +38,9 @@ rex_yform_manager_dataset::setModelClass(
     TeamTag::class
 );
 
-if (rex::isBackend() && rex::isDebugMode() && rex_config::get('school', 'dev')) {
-    School::writeModule();
-    School::writeTemplate();
+if (rex::isBackend() && rex::isDebugMode() && rex_config::get('plus_bs5', 'dev')) {
+    Helper::writeModule('school', 'school.%');
+    Helper::writeTemplate('school', 'school.%');
 }
 
 
@@ -58,13 +59,13 @@ if (rex::isBackend() && rex::isDebugMode() && rex_config::get('school', 'dev')) 
                     }
                     break;
                 case 'rex-event-date':
-                    $event_date = \event_date::get($matches[3]);
+                    $event_date = \Alexplusde\Events\Date::get($matches[3]);
                     if ($event_date) {
                         $url = $event_date->getUrl();
                     }
                     break;
                 case 'rex-event-category':
-                    $event_category = Category::get($matches[3]);
+                    $event_category = \Alexplusde\Events\Category::get($matches[3]);
                     if ($event_category) {
                         $url = $event_category->getUrl();
                     }

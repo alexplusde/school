@@ -1,6 +1,3 @@
 <?php
 
-namespace Alexplusde\School;
-
-School::updateModule();
-School::updateTemplate();
+include(__DIR__ . 'install.php');
