@@ -8,11 +8,11 @@ requires:
         version: '>8.3,<9'
     redaxo: ^5.18
     packages:
+        plus_bs5: ">=0,<2"
         yform: "^4"
         yform_spam_protection: ">=1"
         events: ">=5,<7"
-        yrewrite: ">=2,<3"
-        yrewrite_metainfo: "<3"
+        yrewrite_metainfo: "<=3"
 
 page:
     title: translate:school_title
