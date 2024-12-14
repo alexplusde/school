@@ -1,5 +1,5 @@
 package: school 
-version: '0.1.0-dev' 
+version: '0.3.0-dev-2024-12-14'
 author: 'Alexander Walther'
 supportpage: https://github.com/alexplusde/school
 
@@ -12,7 +12,6 @@ requires:
         yform: "^4"
         yform_spam_protection: ">=1"
         events: ">=5,<7"
-        yrewrite_metainfo: "<=3"
 
 page:
     title: translate:school_title
