@@ -7,23 +7,23 @@
 
 use Url\Url;
 
-$manager = Url::resolveCurrent();
+        $manager = Url::resolveCurrent();
 
-if ($manager) {
-    $school_project = Project::get($manager->getDatasetId());
-    if ($school_project) {
-        $this->setVar("project_ag", $school_project);
-        $this->subfragment('school/project_ag-details.php');
-    }
-} else {
-    $school_project = Project::query()->find();
-    if ($school_project) {
-        $this->setVar("projects_ag", $school_project);
-        $this->subfragment('school/project_ag-list.php');
-    }
-}
+        if ($manager) {
+            $school_project = Project::get($manager->getDatasetId());
+            if ($school_project) {
+                $this->setVar("project_ag", $school_project);
+                $this->subfragment('school/project_ag-details.php');
+            }
+        } else {
+            $school_project = Project::query()->find();
+            if ($school_project) {
+                $this->setVar("projects_ag", $school_project);
+                $this->subfragment('school/project_ag-list.php');
+            }
+        }
 
-?>
+        ?>
 </div>
 </section>
 <!-- fragments/school/project_ag.php -->

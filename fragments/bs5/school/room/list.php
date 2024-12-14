@@ -20,7 +20,7 @@ $rooms = Room::getAll();
     <tbody>
         <?php
         foreach ($rooms as $room) {
-        ?>
+            ?>
             <tr>
                 <td><?= $room->getName() ?></td>
                 <td><?= $room->getLocated() ?></td>
@@ -28,8 +28,8 @@ $rooms = Room::getAll();
             </tr>
         <?php
         }
-        #        $room_anchors[] = '<a  class="btn btn-secondary"  href="'.rex_getUrl('', '', ['room-id' => $room->getValue('id')]).'">'.$room->getValue('name').'</a>';
-        ?>
+#        $room_anchors[] = '<a  class="btn btn-secondary"  href="'.rex_getUrl('', '', ['room-id' => $room->getValue('id')]).'">'.$room->getValue('name').'</a>';
+?>
     </tbody>
 </table>
 <!-- END school/fragments/bs5/school/list.php -->

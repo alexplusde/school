@@ -22,5 +22,3 @@ $fragment->setVar('medialist', "REX_MEDIALIST[1]");
 
 /* Ausgabe */
 echo $fragment->parse('bs5/school/team/index.php');
-
-?>

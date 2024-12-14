@@ -9,7 +9,7 @@ use rex_article;
 $content1 = $this->getVar('content1');
 $content2 = $this->getVar('content2');
 
-if($content2 === '') {
+if ($content2 === '') {
     $class_content1 = 'col-12';
     $class_content2 = 'd-none';
 } else {

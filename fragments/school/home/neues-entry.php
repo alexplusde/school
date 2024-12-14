@@ -3,6 +3,7 @@
 namespace Alexplusde\School;
 
 use FriendsOfRedaxo\Neues\Entry;
+
 /** @var rex_fragment $this */
 /** @var Entry $entry */
 $entry = $this->getVar('entry');
@@ -19,7 +20,7 @@ if (strlen($name) > 50) {
 }
 $category = $entry->getCategories()->first();
 $category_name = 'Allgemein';
-if($category !== null) {
+if ($category !== null) {
     $category_name = $category->getName() ?? 'Allgemein';
 }
 ?>

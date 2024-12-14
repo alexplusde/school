@@ -27,5 +27,3 @@ $fragment->setVar('modul_yform', $modul_yform);
 
 /* Ausgabe */
 echo $fragment->parse('bs5/school/contact/index.php');
-
-?>

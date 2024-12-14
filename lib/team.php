@@ -33,41 +33,48 @@ class Team extends \rex_yform_manager_dataset
         return "";
     }
 
-	
+    
     /* Amtsbezeichnung */
     /** @api */
-    public function getTitle() : string {
+    public function getTitle() : string
+    {
         return $this->getValue("title");
     }
     /** @api */
-    public function setTitle(mixed $value) : self {
+    public function setTitle(mixed $value) : self
+    {
         $this->setValue("title", $value);
         return $this;
     }
 
     /* Anrede */
     /** @api */
-    public function getGender() : string {
+    public function getGender() : string
+    {
         return $this->getValue("gender");
     }
     /** @api */
-    public function setGender(mixed $value) : self {
+    public function setGender(mixed $value) : self
+    {
         $this->setValue("gender", $value);
         return $this;
     }
 
     /* Veröffentlichung */
     /** @api */
-    public function getStatus() : mixed {
+    public function getStatus() : mixed
+    {
         return $this->getValue("status");
     }
     /** @api */
-    public function setStatus(mixed $param) : mixed {
+    public function setStatus(mixed $param) : mixed
+    {
         $this->setValue("status", $param);
         return $this;
     }
 
-    public static function getStatusOptions() : array {
+    public static function getStatusOptions() : array
+    {
         return [
             self::STATUS_ONLINE => "translate:school.table.team.status.online",
             self::STATUS_OFFLINE => "translate:school.table.team.status.offline",
@@ -76,112 +83,131 @@ class Team extends \rex_yform_manager_dataset
 
     /* Titel */
     /** @api */
-    public function getAcademicTitle() : mixed {
+    public function getAcademicTitle() : mixed
+    {
         return $this->getValue("academic_title");
     }
     /** @api */
-    public function setAcademicTitle(mixed $value) : self {
+    public function setAcademicTitle(mixed $value) : self
+    {
         $this->setValue("academic_title", $value);
         return $this;
     }
 
     /* Vorname */
     /** @api */
-    public function getPrename() : mixed {
+    public function getPrename() : mixed
+    {
         return $this->getValue("prename");
     }
     /** @api */
-    public function setPrename(mixed $value) : self {
+    public function setPrename(mixed $value) : self
+    {
         $this->setValue("prename", $value);
         return $this;
     }
 
     /* Nachname */
     /** @api */
-    public function getName() : mixed {
+    public function getName() : mixed
+    {
         return $this->getValue("name");
     }
     /** @api */
-    public function setName(mixed $value) : self {
+    public function setName(mixed $value) : self
+    {
         $this->setValue("name", $value);
         return $this;
     }
 
     /* Kürzel */
     /** @api */
-    public function getKuerzel() : mixed {
+    public function getKuerzel() : mixed
+    {
         return $this->getValue("kuerzel");
     }
     /** @api */
-    public function setKuerzel(mixed $value) : self {
+    public function setKuerzel(mixed $value) : self
+    {
         $this->setValue("kuerzel", $value);
         return $this;
     }
 
     /* Aufgaben / Funktion */
     /** @api */
-    public function getJob() : mixed {
+    public function getJob() : mixed
+    {
         return $this->getValue("job");
     }
     /** @api */
-    public function setJob(mixed $value) : self {
+    public function setJob(mixed $value) : self
+    {
         $this->setValue("job", $value);
         return $this;
     }
 
     /* Sonderverantwortlichkeiten */
     /** @api */
-    public function getSonder() : string {
+    public function getSonder() : string
+    {
         return $this->getValue("sonder");
     }
     /** @api */
-    public function setSonder(mixed $value) : self {
+    public function setSonder(mixed $value) : self
+    {
         $this->setValue("sonder", $value);
         return $this;
     }
 
     /* In Lehrerliste anzeigen? */
     /** @api */
-    public function getIsTeacher(bool $asBool = false) : mixed {
-        if($asBool) {
+    public function getIsTeacher(bool $asBool = false) : mixed
+    {
+        if ($asBool) {
             return (bool) $this->getValue("is_teacher");
         }
         return $this->getValue("is_teacher");
     }
     /** @api */
-    public function setIsTeacher(int $value = 1) : self {
+    public function setIsTeacher(int $value = 1) : self
+    {
         $this->setValue("is_teacher", $value);
         return $this;
     }
             
     /* E-Mail-Adresse */
     /** @api */
-    public function getEmail() : mixed {
+    public function getEmail() : mixed
+    {
         return $this->getValue("email");
     }
     /** @api */
-    public function setEmail(mixed $value) : self {
+    public function setEmail(mixed $value) : self
+    {
         $this->setValue("email", $value);
         return $this;
     }
 
     /* Fächer */
     /** @api */
-    public function getCourseIds() : ?rex_yform_manager_dataset {
+    public function getCourseIds() : ?rex_yform_manager_dataset
+    {
         return $this->getRelatedDataset("course_ids");
     }
 
     /* Profilbild */
     /** @api */
-    public function getBild(bool $asMedia = false) : mixed {
-        if($asMedia) {
+    public function getBild(bool $asMedia = false) : mixed
+    {
+        if ($asMedia) {
             return \rex_media_plus::get($this->getValue("Bild"));
         }
         return $this->getValue("Bild");
     }
     /** @api */
-    public function setBild(string $filename) : self {
-        if(rex_media::get($filename)) {
+    public function setBild(string $filename) : self
+    {
+        if (rex_media::get($filename)) {
             $this->getValue("Bild", $filename);
         }
         return $this;
@@ -189,76 +215,89 @@ class Team extends \rex_yform_manager_dataset
             
     /* Beschreibung */
     /** @api */
-    public function getDescription(bool $asPlaintext = false) : string {
-        if($asPlaintext) {
+    public function getDescription(bool $asPlaintext = false) : string
+    {
+        if ($asPlaintext) {
             return strip_tags($this->getValue("description"));
         }
         return $this->getValue("description");
     }
     /** @api */
-    public function setDescription(mixed $value) : self {
+    public function setDescription(mixed $value) : self
+    {
         $this->setValue("description", $value);
         return $this;
     }
             
     /*  */
     /** @api */
-    public function getCreateUser() : ?rex_user {
+    public function getCreateUser() : ?rex_user
+    {
         return rex_user::get($this->getValue("createUser"));
     }
     /** @api */
-    public function setCreateUser(mixed $value) : self {
+    public function setCreateUser(mixed $value) : self
+    {
         $this->setValue("createUser", $value);
         return $this;
     }
 
     /*  */
     /** @api */
-    public function getCreateDate() : ?string {
+    public function getCreateDate() : ?string
+    {
         return $this->getValue("createDate");
     }
     /** @api */
-    public function setCreateDate(string $value) : self {
+    public function setCreateDate(string $value) : self
+    {
         $this->setValue("createDate", $value);
         return $this;
     }
 
     /*  */
     /** @api */
-    public function getUpdateDate() : ?string {
+    public function getUpdateDate() : ?string
+    {
         return $this->getValue("updateDate");
     }
     /** @api */
-    public function setUpdateDate(string $value) : self {
+    public function setUpdateDate(string $value) : self
+    {
         $this->setValue("updateDate", $value);
         return $this;
     }
 
     /*  */
     /** @api */
-    public function getUpdateUser() : ?rex_user {
+    public function getUpdateUser() : ?rex_user
+    {
         return rex_user::get($this->getValue("updateUser"));
     }
     /** @api */
-    public function setUpdateUser(mixed $value) : self {
+    public function setUpdateUser(mixed $value) : self
+    {
         $this->setValue("updateUser", $value);
         return $this;
     }
 
     /*  */
     /** @api */
-    public function getUuid() : mixed {
+    public function getUuid() : mixed
+    {
         return $this->getValue("uuid");
     }
     /** @api */
-    public function setUuid(mixed $value) : self {
+    public function setUuid(mixed $value) : self
+    {
         $this->setValue("uuid", $value);
         return $this;
     }
 
     /* [translate:school.table.preview_link] */
     /** @api */
-    public function getUrl() : string {
+    public function getUrl() : string
+    {
         if (rex_addon::get("yrewrite") && rex_addon::get("yrewrite")->isAvailable()) {
             $host = rex_yrewrite::getFullUrlByArticleId(rex_article::getCurrentId(), rex_clang::getCurrentId());
         } else {

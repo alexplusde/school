@@ -3,7 +3,7 @@
 namespace Alexplusde\School;
 
 use rex_addon;
-use rex_article;    
+use rex_article;
 use rex_clang;
 use rex_yrewrite;
 use rex;
@@ -17,88 +17,104 @@ class Room extends \rex_yform_manager_dataset
         
     /* Raum-Kürzel */
     /** @api */
-    public function getName() : mixed {
+    public function getName() : mixed
+    {
         return $this->getValue("name");
     }
     /** @api */
-    public function setName(mixed $value) : self {
+    public function setName(mixed $value) : self
+    {
         $this->setValue("name", $value);
         return $this;
     }
 
     /* Gebäudeteil */
     /** @api */
-    public function getLocated() : string {
+    public function getLocated() : string
+    {
         return $this->getValue("located");
     }
     /** @api */
-    public function setLocated(mixed $value) : self {
+    public function setLocated(mixed $value) : self
+    {
         $this->setValue("located", $value);
         return $this;
     }
 
     /* Name / Funktion */
     /** @api */
-    public function getTitle() : mixed {
+    public function getTitle() : mixed
+    {
         return $this->getValue("title");
     }
     /** @api */
-    public function setTitle(mixed $value) : self {
+    public function setTitle(mixed $value) : self
+    {
         $this->setValue("title", $value);
         return $this;
     }
 
     /*  */
     /** @api */
-    public function getCreateDate() : ?string {
+    public function getCreateDate() : ?string
+    {
         return $this->getValue("createdate");
     }
     /** @api */
-    public function setCreateDate(string $value) : self {
+    public function setCreateDate(string $value) : self
+    {
         $this->setValue("createdate", $value);
         return $this;
     }
 
     /*  */
     /** @api */
-    public function getCreateUser() : ?rex_user {
+    public function getCreateUser() : ?rex_user
+    {
         return rex_user::get($this->getValue("createuser"));
     }
     /** @api */
-    public function setCreateUser(mixed $value) : self {
+    public function setCreateUser(mixed $value) : self
+    {
         $this->setValue("createuser", $value);
         return $this;
     }
 
     /*  */
     /** @api */
-    public function getUpdateDate() : ?string {
+    public function getUpdateDate() : ?string
+    {
         return $this->getValue("updatedate");
     }
     /** @api */
-    public function setUpdateDate(string $value) : self {
+    public function setUpdateDate(string $value) : self
+    {
         $this->setValue("updatedate", $value);
         return $this;
     }
 
     /*  */
     /** @api */
-    public function getUpdateUser() : ?rex_user {
+    public function getUpdateUser() : ?rex_user
+    {
         return rex_user::get($this->getValue("updateuser"));
     }
     /** @api */
-    public function setUpdateUser(mixed $value) : self {
+    public function setUpdateUser(mixed $value) : self
+    {
         $this->setValue("updateuser", $value);
         return $this;
     }
 
     /*  */
     /** @api */
-    public function getUuid() : mixed {
+    public function getUuid() : mixed
+    {
         return $this->getValue("uuid");
     }
     /** @api */
-    public function setUuid(mixed $value) : self {
+    public function setUuid(mixed $value) : self
+    {
         $this->setValue("uuid", $value);
         return $this;
     }

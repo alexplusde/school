@@ -22,6 +22,6 @@ if ($room !== null) {
     echo $fragment->parseSubfragment('bs5/school/room/details.php');
 }
 
-if($room === null) {
+if ($room === null) {
     echo $fragment->parseSubfragment('bs5/school/room/list.php');
 }

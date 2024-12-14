@@ -5,7 +5,7 @@ $filename = $this->getVar('file');
 $media = rex_media::get($filename);
 
 if (!is_object($media)) {
-	return;
+    return;
 }
 
 $is_image = $media->isImage();

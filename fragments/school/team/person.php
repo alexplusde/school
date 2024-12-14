@@ -7,8 +7,8 @@ use Alexplusde\School\Team;
 $person = $this->getVar('person');
 /** @var rex_media_plus $media */
 $media = $person->getBild(true);
-if($media === null) {
-	$media = rex_media_plus::get(rex_config::get('school', 'team_default_image'));
+if ($media === null) {
+    $media = rex_media_plus::get(rex_config::get('school', 'team_default_image'));
 }
 ?>
 <!-- BEGIN school/fragments/school/team/person.tpl.php -->
@@ -16,7 +16,7 @@ if($media === null) {
 		<div class="row p-3">
 			<div class="col-3 pr-0">
 				<?php if ($media) {
-					echo $media->setClass("img-fluid rounded-circle")->getImg('person-thumb') ?>
+				    echo $media->setClass("img-fluid rounded-circle")->getImg('person-thumb') ?>
 				<?php } ?>
 			</div>
 			<div class="col-9">
