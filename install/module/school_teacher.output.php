@@ -21,6 +21,6 @@ $fragment->setVar('slice_id', "REX_SLICE_ID");
 $fragment->setVar('medialist', "REX_MEDIALIST[1]");
 
 /* Ausgabe */
-echo $fragment->parse('bs5/school/team/index.php');
+echo $fragment->parse('school/team/index.php');
 
 ?>

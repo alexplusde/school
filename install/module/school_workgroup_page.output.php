@@ -14,4 +14,4 @@ if (!$project) {
 
 $fragment = new Fragment();
 $fragment->setVar('project', $project);
-echo $fragment->parse('bs5/school/project/index.php');
+echo $fragment->parse('school/project/index.php');
