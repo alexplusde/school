@@ -69,24 +69,24 @@ setlocale(LC_ALL, rex_clang::getCurrent()->getValue('locale'), rex_clang::getCur
         <!-- /Webfonts -->
         <?php
     $fragment = new Fragment();
-$fragment->setVar('content1', "REX_ARTICLE[ctype=1]", false);
-$fragment->setVar('content2', "REX_ARTICLE[ctype=2]", false);
+              $fragment->setVar('content1', "REX_ARTICLE[ctype=1]", false);
+              $fragment->setVar('content2', "REX_ARTICLE[ctype=2]", false);
 
-echo $fragment->parse('bs5/template/meta.php');
-?>
+              echo $fragment->parse('bs5/template/meta.php');
+        ?>
     </head>
 
     <body>
         <div class="screen-darken"></div>
         <?php
 
-echo $fragment->parse('bs5/template/header.php');
+        echo $fragment->parse('bs5/template/header.php');
 
-echo $fragment->parse('bs5/template/breadcrumb.php');
-echo $fragment->parse('bs5/template/main.php');
+        echo $fragment->parse('bs5/template/breadcrumb.php');
+        echo $fragment->parse('bs5/template/main.php');
 
-echo $fragment->parse('bs5/template/footer.php');
-?>
+        echo $fragment->parse('bs5/template/footer.php');
+        ?>
         <script src="<?= speed_up_asset::getUrl("js/jquery-3.7.1.min.js") ?>"></script>
         <script src="<?= speed_up_asset::getUrl('js/bootstrap.bundle.min.js') ?>"></script>
 

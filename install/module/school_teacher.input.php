@@ -10,3 +10,5 @@ if (!Helper::packageExists($requiredAddons)) {
 };
 
 Helper::showBackendUserInstruction("Verwalte die Liste über den Menüpunkt Schule.", Helper::getBackendTableManagerEditLink('rex_school', 'school/team/team'));
+
+?>
