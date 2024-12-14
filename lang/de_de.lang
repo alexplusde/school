@@ -11,7 +11,6 @@ school_team_tags = Kategorien
 school_settings = Einstellungen
 school_docs = Hilfe
 
-
 # Allgemeine Table Manager Feld-Bezeichnungen
 
 school.table.preview_link = Vorschau
@@ -29,6 +28,8 @@ school.table.updateuser = Geändert von
 school.team.default_image = Standardbild
 school.team.default_image.notice = Wird angezeigt, wenn kein Bild vorhanden ist.
 
+# Template-Bezeichnungen
+school.template.default = Schule 2025 v3
 
 # Modul-Bezeichnungen
 
