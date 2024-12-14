@@ -5,7 +5,8 @@
 
         <?php
 
-use Url\Url;
+                            use Alexplusde\School\Project;
+                            use Url\Url;
 
         $manager = Url::resolveCurrent();
 

@@ -2,7 +2,6 @@
 
 namespace Alexplusde\School;
 
-use rex_sql;
 use Alexplusde\BS5\Helper;
 
 /** @var rex_fragment $this */
@@ -11,45 +10,16 @@ $module = $this->getVar('module');
 $modul_yform = $this->getVar('modul_yform');
 
 ?>
-<section class="modul modul-mail" id="modul-REX_SLICE_ID">
-    
-	<div class="mail-wrapper">
-		<?php         if ($modul['show_title'] || $modul['teaser']) {
-		    echo '<div class="teaser-wrapper">';
-		}
+<section class="position-relative" id="modul-contact-form">
 
-#### Title ####
-if ($modul['show_title']) {
-    echo '<div class="mail-title"><h2>';
-    if ($modul['title']) {
-        echo $modul['title'];
-    } else {
-        "{{ modul:mail:title }}";
-    }
-    echo '</h2></div>';
-}
-
-#### Teaser ####
-if ($modul['teaser']) {
-    echo '<div class="downloads-teaser">';
-    echo $modul['teaser'];
-    echo '</div>';
-}
-
-if ($modul['show_headline']) {
-    echo '</div>';
-}
-
-#### Kontaktformular ####
-
-echo '<div class="mail-wrapper">';
+<?php
 
 $yform = new \rex_yform();
 $yform->setObjectparams('form_ytemplate', 'bootstrap');
 $yform->setObjectparams('form_showformafterupdate', 0);
 $yform->setObjectparams('real_field_names', true);
-$yform->setObjectparams('form_name', 'yform-REX_SLICE_ID');
-$yform->setObjectparams('form_anchor', 'modul-REX_SLICE_ID');
+$yform->setObjectparams('form_name', 'yform-modul-<?php echo $module->getId(); ?>');
+$yform->setObjectparams('form_anchor', 'modul-contact-from');
 
 $yform->setObjectparams('form_action', rex_getUrl('REX_ARTICLE_ID'));
 
@@ -75,8 +45,5 @@ $yform->setActionField('db', array('rex_school_inbox'));
 $yform->setActionField('showtext', array($modul_yform['success'], "", "", "1"));
 
 echo $yform->getForm();
-
-echo '</div>';
 ?>
-	</div>
 </section>
