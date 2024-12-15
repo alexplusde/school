@@ -4,6 +4,7 @@ namespace Alexplusde\School;
 
 use rex_article;
 use rex_user;
+use rex_yform_manager_collection;
 use rex_yform_manager_dataset;
 
 class TeamTag extends \rex_yform_manager_dataset
@@ -67,16 +68,16 @@ class TeamTag extends \rex_yform_manager_dataset
 
     /* Leitung */
     /** @api */
-    public function getTeamFav() : ?rex_yform_manager_dataset
+    public function getTeamFav() : ?Team
     {
         return $this->getRelatedDataset("team_id_fav");
     }
 
     /* Verknüpft mit folgenden Ansprechpartnern */
     /** @api */
-    public function getTeam() : ?rex_yform_manager_dataset
+    public function getTeam() : ?rex_yform_manager_collection
     {
-        return $this->getRelatedDataset("team_id");
+        return $this->getRelatedCollection("team_id");
     }
 
     /* online? */
