@@ -18,8 +18,8 @@ class Team extends \rex_yform_manager_dataset
 
     public function getFullName()
     {
-        if (strlen($this->getPrename() > 0)) {
-            return $this->getAcademicTitle() . " ". substr($this->getPrename(), 0, 1) .". ". $this->getName();
+        if (strlen($this->getFirstname() > 0)) {
+            return $this->getAcademicTitle() . " ". substr($this->getFirstname(), 0, 1) .". ". $this->getName();
         }
         return $this->getAcademicTitle() . " ". $this->getName();
     }
@@ -96,12 +96,12 @@ class Team extends \rex_yform_manager_dataset
 
     /* Vorname */
     /** @api */
-    public function getPrename() : mixed
+    public function getFirstname() : mixed
     {
         return $this->getValue("prename");
     }
     /** @api */
-    public function setPrename(mixed $value) : self
+    public function setFirstname(mixed $value) : self
     {
         $this->setValue("prename", $value);
         return $this;
@@ -190,22 +190,29 @@ class Team extends \rex_yform_manager_dataset
 
     /* Fächer */
     /** @api */
-    public function getCourseIds() : ?rex_yform_manager_dataset
+    public function getCourse() : ?rex_yform_manager_dataset
     {
         return $this->getRelatedDataset("course_ids");
     }
 
     /* Profilbild */
     /** @api */
-    public function getBild(bool $asMedia = false) : mixed
+    public function getImage(bool $asMedia = false) : mixed
     {
+        // Wenn leer, allgemeines Bild nehmen:
+        if (empty($this->getValue("Bild"))) {
+            if($asMedia) {
+                return \rex_media_plus::get(\rex_config::get('school', 'default_image'));
+            }
+            return \rex_config::get('school', 'team_default_image');
+        }
         if ($asMedia) {
             return \rex_media_plus::get($this->getValue("Bild"));
         }
         return $this->getValue("Bild");
     }
     /** @api */
-    public function setBild(string $filename) : self
+    public function setImage(string $filename) : self
     {
         if (rex_media::get($filename)) {
             $this->getValue("Bild", $filename);
