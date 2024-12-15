@@ -1,17 +1,37 @@
 <?php
 
+/**
+ * Dieses Modul wird über das Addon school verwaltet und geupdatet.
+ * Um das Modul zu entkoppeln, ändere den Modul-Key in REDAXO. Um die 
+ * Ausgabe zu verändern, genügt es, das passende Fragment zu überschreiben.
+ */
+
+use Alexplusde\BS5\Helper;
+use Alexplusde\School\Team;
 use FriendsOfRedaxo\MForm;
 
-$mform1 = new MForm();
+/* Addon-Prüfung */
+$requiredAddons = ['yform', 'school'];
+if (!Helper::packageExists($requiredAddons)) {
+    echo rex_view::error(rex_i18n::rawMsg('bs5_missing_addon', implode(', ', $requiredAddons)));
+    return;
+};
 
-$mform1->addFieldsetArea("");
+/* MForm */
+$mform = new MForm();
 
-$team_sql = rex_sql::factory()->getArray('SELECT id, name FROM rex_school_team ORDER BY name');
-$team = [];
-$team[' '] = "Bitte wählen"; // Leer-Option
-foreach ($team_sql as $person) {
-    $team[$person['id']] = $person['name'];
+$mform->addFieldsetArea("");
+
+$options = [];
+$team = Team::query()->select('name')->find();
+foreach ($team as $person) {
+    $options[$person->getId()] = $person->getFullName();
 }
-$mform1->addSelectField("1.0.id", $team, ["label" => 'Mitarbeiter']);
 
-echo MBlock::show(1, $mform1->show(), array('min'=>1,'max'=>10));
+$mform->addSelectField("team_id", $options, ["label" => 'Ansprechperson']);
+
+/* MForm Repeater */
+$repeater = MForm::factory();
+$repeater->addRepeaterElement(1, $mform);
+
+echo $repeater->show();

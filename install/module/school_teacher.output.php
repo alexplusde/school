@@ -11,7 +11,7 @@ if (!Helper::packageExists($requiredAddons)) {
 };
 
 /* Instruktionen */
-Helper::showBackendUserInstruction("Der Raumplan wird über das Addon 'school' verwaltet.", Helper::getBackendTableManagerEditLink('rex_school_room', 0, 'school/room'));
+Helper::showBackendUserInstruction("Verwalte die Liste über den Menüpunkt Schule.", Helper::getBackendTableManagerEditLink('rex_school_team', 0, 'school/team/team'));
 
 /* Fragment */
 $fragment = new Fragment();

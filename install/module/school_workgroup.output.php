@@ -11,8 +11,6 @@ if (!Helper::packageExists($requiredAddons)) {
     return;
 };
 
-/** Variablen */
-
 /* Fragment */
 $fragment = new Fragment();
 $fragment->setVar('slice_id', "REX_SLICE_ID");

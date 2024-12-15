@@ -1,28 +1,28 @@
 <?php
 
+/**
+ * Dieses Modul wird über das Addon school verwaltet und geupdatet.
+ * Um das Modul zu entkoppeln, ändere den Modul-Key in REDAXO. Um die 
+ * Ausgabe zu verändern, genügt es, das passende Fragment zu überschreiben.
+ */
+
 use Alexplusde\BS5\Fragment;
-use Alexplusde\School\Team;
+use Alexplusde\BS5\Helper;
 
-$team = rex_var::toArray("REX_VALUE[1]");
-$team_ids = array_column($team, 'id');
-$persons = Team::query()->where('id', $team_ids)->find();
+/* Benötigte Addons */
+$requiredAddons = ['yform', 'school'];
+if (!Helper::packageExists($requiredAddons)) {
+    echo rex_view::error(rex_i18n::rawMsg('bs5_missing_addon', implode(', ', $requiredAddons)));
+    return;
+};
 
-?>
-<section class="mt-5" id="modul-REX_SLICE_ID">
-	<h2 class="h5">Kontakt</h2>
-	<?php
-    if ($persons !== null) {
-        ?>
-		<ul class="list-unstyled">
-			<?php
-                foreach ($persons as $person) {
-                    $person_fragment = new Fragment();
-                    $person_fragment->setVar('person', $person);
-                    echo $person_fragment->parse("school/team/person.php");
-                } // foreach ($team as $person_id)
-        ?>
-		</ul>
-	<?php
-    } // if (count($team))
-?>
-</section>
+/* Fragment */
+$fragment = new Fragment();
+$fragment->setVar('slice_id', "REX_SLICE_ID");
+$fragment->setVar('article_id', "REX_ARTICLE_ID");
+
+/* Modulspezifische Variablen */
+$fraqgment->setVar('team_ids', "REX_VALUE[1]");
+
+
+echo $fragment->parse('school/responsible/index.php');

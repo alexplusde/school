@@ -19,6 +19,7 @@ foreach ($subjects_sql as $subject) {
     $subjects[$subject['id']] = $subject;
 }
 ?>
+<!-- BEGIN scholl/fragments/school/team/index.php -->
 <section class="modul modul-school_teachers" id="modul-REX_SLICE_ID">
 <?= Helper::getBackendEditLink(); ?>
         <table class="table" data-tablesort>
@@ -57,3 +58,4 @@ foreach ($subjects_sql as $subject) {
             </tfoot>
         </table>
 </section>
+<!-- END scholl/fragments/school/team/index.php -->
