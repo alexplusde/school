@@ -22,7 +22,7 @@ $fragment->setVar('slice_id', "REX_SLICE_ID");
 $fragment->setVar('article_id', "REX_ARTICLE_ID");
 
 /* Modulspezifische Variablen */
-$fraqgment->setVar('team_ids', "REX_VALUE[1]");
+$fragment->setVar('team_ids', "REX_VALUE[1]");
 
 
 echo $fragment->parse('school/responsible/index.php');

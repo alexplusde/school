@@ -11,7 +11,7 @@ if (!Helper::packageExists($requiredAddons)) {
 };
 
 /* Instruktionen */
-Helper::showBackendUserInstruction("Verwalte den Geschäftsverteilungsplan über den Menüpunkt Schule.", Helper::getBackendTableManagerEditLink('rex_school', 'school/team/category'));
+Helper::showBackendUserInstruction("Verwalte den Geschäftsverteilungsplan über den Menüpunkt Schule.", Helper::getBackendTableManagerEditLink('rex_school_team_tag', 0,'school/team/category'));
 
 /* Fragment */
 $fragment = new Fragment();
