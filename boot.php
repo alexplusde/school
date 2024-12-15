@@ -34,7 +34,7 @@ rex_yform_manager_dataset::setModelClass(
 );
 
 rex_yform_manager_dataset::setModelClass(
-    'rex_school_team_tags',
+    'rex_school_team_tag',
     TeamTag::class
 );
 
