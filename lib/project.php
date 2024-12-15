@@ -25,11 +25,8 @@ class Project extends \rex_yform_manager_dataset
             $host = rtrim(rex::getServer(), '/').rex_getUrl(rex_article::getCurrentId(), rex_clang::getCurrentId());
         }
         
-        if ($type == "ag") {
-            return  rex_getUrl('', '', ['ag-id' => $this->getId()]);
-        } elseif ($type == "smv") {
-            return  rex_getUrl('', '', ['smv-id' => $this->getId()]);
-        }
+        return  rex_getUrl('', '', ['project-id' => $this->getId()]);
+       
     }
 
     /* Name */
