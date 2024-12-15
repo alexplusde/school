@@ -9,6 +9,9 @@ use rex_var;
 /** @var rex_fragment $this */
 
 $team = rex_var::toArray("REX_VALUE[1]");
+if(empty($team)) {
+    return;
+}
 $team_ids = array_column($team, 'id');
 $persons = Team::query()->where('id', $team_ids)->find();
 

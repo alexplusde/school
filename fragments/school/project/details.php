@@ -1,7 +1,11 @@
 <!-- fragments/school/project_ag-details.php -->
 <?php
-$project = $this->getVar('project_ag');
-dump($project);
+
+use Alexplusde\School\Room;
+use Alexplusde\School\Team;
+
+$project = $this->getVar('project');
+
 ?>
 <h1><?= $project->getName(); ?>
 </h1>
@@ -25,4 +29,4 @@ dump($project);
 
 	</div>
 </div>
-<!-- fragments/school/project_ag-details.php -->
+<!-- fragments/school/project/details.php -->

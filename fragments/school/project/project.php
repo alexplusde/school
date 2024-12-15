@@ -14,17 +14,17 @@
             $school_project = Project::get($manager->getDatasetId());
             if ($school_project) {
                 $this->setVar("project_ag", $school_project);
-                $this->subfragment('school/project_ag-details.php');
+                $this->subfragment('school/project/details.php');
             }
         } else {
             $school_project = Project::query()->find();
             if ($school_project) {
                 $this->setVar("projects_ag", $school_project);
-                $this->subfragment('school/project_ag-list.php');
+                $this->subfragment('school/project/list.php');
             }
         }
 
         ?>
 </div>
 </section>
-<!-- fragments/school/project_ag.php -->
+<!-- END fragments/school/project/project.php -->

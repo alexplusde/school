@@ -6,7 +6,7 @@ use Alexplusde\School\Team;
 /** @var Team $person */
 $person = $this->getVar('person');
 /** @var rex_media_plus $media */
-$media = $person->getBild(true);
+$media = $person->getImage(true);
 if ($media === null) {
     $media = rex_media_plus::get(rex_config::get('school', 'team_default_image'));
 }
