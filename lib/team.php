@@ -307,9 +307,9 @@ class Team extends \rex_yform_manager_dataset
     {
         if (rex_addon::get("yrewrite") && rex_addon::get("yrewrite")->isAvailable()) {
             $StartArticleId = rex_yrewrite::getCurrentDomain()->getStartId();
-            $host = rex_yrewrite::getFullUrlByArticleId($StartArticleId, rex_clang::getCurrentId());
+            $host = rtrim(rex_yrewrite::getFullUrlByArticleId($StartArticleId, rex_clang::getCurrentId()), '/');
         } else {
-            $host = rtrim(rex::getServer(), '/').rex_getUrl(rex_article::getCurrentId(), rex_clang::getCurrentId());
+            $host = rtrim(rex::getServer(), '/');
         }
 
         return  $host . rex_getUrl('', '', ['team-id' => $this->getId()]);
