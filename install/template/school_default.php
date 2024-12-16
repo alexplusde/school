@@ -17,6 +17,7 @@ $fragment->setVar('content', $fragment->getVar('content1') . $fragment->getVar('
         <link href="<?= speed_up_asset::getUrl("addons/project/css/project.css") ?>" rel="stylesheet" type="text/css">
         <link href="<?= speed_up_asset::getUrl("addons/school/css/flexslider.css") ?>" rel="stylesheet" type="text/css">
         <link href="<?= speed_up_asset::getUrl("addons/school/css/magnific-popup.css") ?>" rel="stylesheet" type="text/css">
+        <link href="<?= speed_up_asset::getUrl("addons/project/fonts/open-sans.css") ?>" rel="stylesheet" type="text/css">
         <link href="<?= speed_up_asset::getUrl("addons/plus_bs5/fonts/bootstrap-icons.css") ?>" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="<?= speed_up_asset::getUrl('addons/plyr/vendor/plyr/dist/plyr.css') ?>">
         <?= $fragment->parse('bs5/template/meta.php'); ?>
