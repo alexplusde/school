@@ -22,11 +22,17 @@ if ($content2 === '') {
 <main id="content" class="container">
     <article class="row">
         <div class="<?= $class_content1 ?>">
-        <h1 class="my-5"><?= rex_article::getCurrent()->getName() ?></h1>
-        <?php echo $this->getVar('content1') ?>
+            <h1 class="mt-5 mb-3"><?= rex_article::getCurrent()->getName() ?></h1>
+            <?php
+            // Wenn YRewrite SEO-Description, dann diese ausgeben
+            if (rex_article::getCurrent()->getValue('yrewrite_description') != '') {
+                echo '<p>' . rex_article::getCurrent()->getValue('yrewrite_description') . '</p>';
+            }
+            ?>
+            <?php echo $this->getVar('content1') ?>
         </div>
         <aside class="<?= $class_content2 ?>">
-<?php echo $this->getVar('content2') ?>
+            <?php echo $this->getVar('content2') ?>
         </aside>
     </article>
 </main>

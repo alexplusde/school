@@ -22,6 +22,6 @@ $news = Entry::query()
         $this->setVar('entry', $entry);
         echo $this->parse('school/home/neues-entry.php');
     }
-?>
+    ?>
 </div>
 <!-- END school/home/neues.php -->

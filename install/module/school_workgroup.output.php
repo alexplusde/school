@@ -30,6 +30,9 @@ if (!$project) {
 }
 
 $fragment = new Fragment();
+$fragment->setVar('slice_id', "REX_SLICE_ID");
+$fragment->setVar('article_id', "REX_ARTICLE_ID");
+
 $fragment->setVar('project', $project);
 echo $fragment->parse('school/project/index.php');
 

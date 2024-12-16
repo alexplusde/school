@@ -1,4 +1,10 @@
+<?php
+
+use Alexplusde\BS5\Helper;
+?>
 <section class="modul modul-mail" id="modul-REX_SLICE_ID">
+<?= Helper::getBackendEditLink("REX_ARTICLE_ID", null, "REX_SLICE_ID") ?>
+
 	<div class="mail-wrapper">
 		<?php
         $yform = new rex_yform();

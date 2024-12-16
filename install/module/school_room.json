@@ -1,1 +1,13 @@
-{"id":19,"key":"school.room","name":"translate:school.module.room","createdate":"2017-05-11 22:18:25","createuser":"aw@alexplus.de","updatedate":"2024-12-14 18:13:22","updateuser":"mail@alexplus.de","attributes":"","revision":0}
+{
+    "id": 19,
+    "key": "school.room",
+    "name": "translate:school.module.room",
+    "createdate": "2017-05-11 22:18:25",
+    "createuser": "aw@alexplus.de",
+    "updatedate": "2024-12-16 03:15:36",
+    "updateuser": "mail@alexplus.de",
+    "attributes": "",
+    "revision": 0,
+    "modulsuche_module_thumbnail": "",
+    "modulsuche_module_description": ""
+}

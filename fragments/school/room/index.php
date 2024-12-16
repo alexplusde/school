@@ -19,9 +19,9 @@ $fragment = new Fragment();
 if ($room !== null) {
 
     $fragment->setVar('room', $room);
-    echo $fragment->parseSubfragment('bs5/school/room/details.php');
+    echo $fragment->parseSubfragment('school/room/details.php');
 }
 
 if ($room === null) {
-    echo $fragment->parseSubfragment('bs5/school/room/list.php');
+    echo $fragment->parseSubfragment('school/room/list.php');
 }

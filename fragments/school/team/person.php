@@ -23,7 +23,7 @@ if ($media === null) {
 				<strong><?= $person->getFullName() ?></strong><br>
 					<span class="mb-1 small"><?= $person->getJob() ?></span>
 					<br>
-					<a class="btn btn-small btn-secondary" href="<?= $person->getUrl() ?>">
+					<a class="btn btn-small btn-secondary" href="/<?= $person->getUrl() ?>">
 						Kontakt
 				</a>
 

@@ -16,6 +16,8 @@ Helper::showBackendUserInstruction("Verwalte die Liste über den Menüpunkt Schu
 /* Fragment */
 $fragment = new Fragment();
 $fragment->setVar('slice_id', "REX_SLICE_ID");
+$fragment->setVar('article_id', "REX_ARTICLE_ID");
+
 
 /* Modulspezifische Variablen */
 $fragment->setVar('medialist', "REX_MEDIALIST[1]");

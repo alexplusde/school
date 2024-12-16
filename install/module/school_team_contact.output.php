@@ -1,6 +1,7 @@
 <?php
 
 use Alexplusde\BS5\Fragment;
+use Alexplusde\BS5\Helper;
 use Alexplusde\School\Team;
 
 use Url\Url;
@@ -15,6 +16,7 @@ if ($manager = Url::resolveCurrent()) {
 if ($person !== null) {
     ?>
     <section class="modul modul-team modul-person row" id="modul-REX_SLICE_ID">
+    <?= Helper::getBackendEditLink("REX_ARTICLE_ID", null, "REX_SLICE_ID") ?>
         <div class="col-12 col-md-3">
             <?php
                 $fragment = new Fragment;

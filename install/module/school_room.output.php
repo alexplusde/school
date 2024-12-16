@@ -13,5 +13,7 @@ Helper::showBackendUserInstruction("Der Raumplan wird über das Addon 'school' v
 
 $fragment = new Fragment();
 $fragment->setVar('slice_id', "REX_SLICE_ID");
+$fragment->setVar('article_id', "REX_ARTICLE_ID");
+
 
 echo $fragment->parse('school/room/index.php');

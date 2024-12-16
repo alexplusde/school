@@ -1,1 +1,13 @@
-{"id":26,"key":"school.contact.website_team","name":"translate:school.module.contact.website_team","createdate":"2018-01-16 14:53:47","createuser":"aw@alexplus.de","updatedate":"2024-12-10 22:35:33","updateuser":"mail@alexplus.de","attributes":null,"revision":0}
+{
+    "id": 26,
+    "key": "school.contact.website_team",
+    "name": "translate:school.module.contact.website_team",
+    "createdate": "2018-01-16 14:53:47",
+    "createuser": "aw@alexplus.de",
+    "updatedate": "2024-12-16 16:20:15",
+    "updateuser": "mail@alexplus.de",
+    "attributes": null,
+    "revision": 0,
+    "modulsuche_module_thumbnail": "",
+    "modulsuche_module_description": ""
+}

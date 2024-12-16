@@ -21,8 +21,9 @@ $modul_yform = rex_var::toArray("REX_VALUE[2]");
 
 /* Fragment */
 $fragment = new Fragment();
-$fragment->setVar('article_id', "REX_ARTICLE_ID");
 $fragment->setVar('slice_id', "REX_SLICE_ID");
+$fragment->setVar('article_id', "REX_ARTICLE_ID");
+
 
 /* Ausgabe */
 echo $fragment->parse('school/contact/index.php');

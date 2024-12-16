@@ -15,8 +15,9 @@ Helper::showBackendUserInstruction("Verwalte den Geschäftsverteilungsplan über
 
 /* Fragment */
 $fragment = new Fragment();
-$fragment->setVar('article_id', "REX_ARTICLE_ID");
 $fragment->setVar('slice_id', "REX_SLICE_ID");
+$fragment->setVar('article_id', "REX_ARTICLE_ID");
+
 
 /* Ausgabe */
 echo $fragment->parse('school/hierachy/index.php');

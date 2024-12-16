@@ -21,3 +21,5 @@ if (rex::isBackend() && rex::isDebugMode() && rex_config::get('plus_bs5', 'dev')
     Helper::updateModule('school');
     Helper::updateTemplate('school');
 }
+
+\rex_delete_cache();
