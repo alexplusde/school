@@ -17,9 +17,7 @@ if (rex_addon::get('yform') && rex_addon::get('yform')->isAvailable()) {
 
 rex_yform_manager_table::deleteCache();
 
-if (rex::isBackend() && rex::isDebugMode() && rex_config::get('plus_bs5', 'dev')) {
-    Helper::updateModule('school');
-    Helper::updateTemplate('school');
-}
+Helper::updateModule('school');
+Helper::updateTemplate('school');
 
 \rex_delete_cache();
