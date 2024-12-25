@@ -7,7 +7,7 @@ namespace Alexplusde\School;
 $rooms = Room::getAll();
 ?>
 <!-- BEGIN school/fragments/bs5/school/list.php -->
-<table class="table" data-tablesorter>
+<table class="table table-responsive" data-tablesorter>
     <thead>
         <tr>
             <th>Raum</th>
