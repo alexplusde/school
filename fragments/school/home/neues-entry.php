@@ -31,7 +31,7 @@ if ($category !== null) {
             <p>
                 <small><?= $entry->getFormattedPublishDate() ?></small>
             </p>
-            <span class="badge badge-primary p-1 my-1 text-white"><?= $category_name ?></span>
+            <span class="badge bg-primary p-1 my-1 text-white"><?= $category_name ?></span>
             <h3 class="card-title h5">
                 <a href="<?= $entry->getUrl() ?>" title="<?= $entry->getName() ?>"><?= $name ?></a>
             </h3>
