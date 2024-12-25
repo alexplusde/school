@@ -2,7 +2,6 @@
 use Alexplusde\BS5\Fragment;
 
 $clang = rex_clang::getCurrent();
-setlocale(LC_ALL, $clang->getValue('locale'), $clang->getCode()); 
 
 $fragment = new Fragment();
 $fragment->setVar('TEMPLATE_KEY', "REX_TEMPLATE_KEY");
