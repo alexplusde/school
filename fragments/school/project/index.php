@@ -26,6 +26,11 @@ if ($project === null) {
     echo $this->parseSubfragment('school/project/list.php');
     return;
 }
+
+if ($project !== null) {
+    $this->setVar('project', $project);
+    echo $this->parseSubfragment('school/project/details.php');
+}
 ?>
 <section id="modul-<?= $this->getVar('slice_id') ?>">
     <h2><?php echo $project->getName(); ?></h2>

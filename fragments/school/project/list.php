@@ -12,7 +12,7 @@ $projects = Project::query()
 <section class="modul modul-school_projects" id="modul-REX_SLICE_ID">
     <div class="row">
         <div class="col-md-12">
-            <table class="table" data-tablesort>
+            <table class="table table-responsive" data-tablesort>
                 <thead>
                     <tr>
                         <th>Name</th>
