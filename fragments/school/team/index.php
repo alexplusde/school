@@ -22,7 +22,7 @@ foreach ($subjects_sql as $subject) {
 <!-- BEGIN scholl/fragments/school/team/index.php -->
 <section class="modul modul-school_teachers" id="modul-REX_SLICE_ID">
 <?= Helper::getBackendEditLink(); ?>
-        <table class="table" data-tablesort>
+        <table class="table  table-responsive" data-tablesort>
             <thead>
                 <tr>
                     <th>Kürzel</th>

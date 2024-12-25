@@ -2,7 +2,7 @@
 <?php
 $team = $this->getVar('team');
 ?>
-<table class="table">
+<table class="table table-responsive">
     <thead>
         <th>Vorname</th>
         <th>Nachname</th>
