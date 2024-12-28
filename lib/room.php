@@ -13,7 +13,6 @@ class Room extends \rex_yform_manager_dataset
 {
     public const STATUS_ONLINE = 1;
     public const STATUS_OFFLINE = 0;
-
         
     /* Raum-Kürzel */
     /** @api */

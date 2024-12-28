@@ -43,3 +43,122 @@ school.module.contact.website_team = 🎒 Kontakt aufnehmen -  Website-Team
 school.module.teacher = 🎒 Lehrer:innen-Liste
 school.module.room  = 🎒 Raumplan
 school.module.subject = 🎒 Fächer
+
+# Tabellen Feld-Bezeichnungen
+
+# Schulklassen
+school.course.table = 🎒 Schulklassen
+school.course.status = Status
+school.course.name = Kursname
+school.course.room_id = Raum
+school.course.teacher_id = Klassenlehrer*in
+school.course.teacher_alt_id = Stlv. Klassenlehrer*in
+school.course.createdate = Erstellt am...
+school.course.createuser = Erstellt von...
+school.course.updatedate = Aktualisiert am..
+school.course.updateuser = Aktualisiert von...
+school.course.uuid = UUID
+school.course.url = Vorschau
+
+# Posteingang Kontaktformular
+school.inbox.table = 🎒 Posteingang
+school.inbox.firstname = Vorname
+school.inbox.lastname = Nachname
+school.inbox.name = Name
+school.inbox.email = E-Mail
+school.inbox.phone = Telefon
+school.inbox.message = Nachricht
+school.inbox.upload = Upload
+school.inbox.class = Klasse
+school.inbox.name_student = Name des Schülers
+school.inbox.createdate = Erstellt am...
+school.inbox.updatedate = Aktualisiert am..
+school.inbox.deletedate = Löschdatum
+
+# Schulische Arbeitsgemeinschaften
+school.project.table = 🎒 Arbeitsgemeinschaften
+school.project.status = Status
+school.project.image = Bild
+school.project.name = Projektname
+school.project.room_id = Raum
+school.project.teacher_ids = Lehrer*innen
+school.project.text_date = Datumstext
+school.project.weekdays = Wochentage
+school.project.description = Beschreibung
+school.project.images = Bilder
+school.project.createuser = Erstellt von...
+school.project.url = Vorschau
+school.project.updateuser = Aktualisiert von...
+school.project.createdate = Erstellt am...
+school.project.updatedate = Aktualisiert am..
+school.project.uuid = UUID
+
+# Raumplan
+school.room.table = 🎒 Raumplan
+school.room.name = Raumname
+school.room.located = Standort
+school.room.title = Funktion
+school.room.createdate = Erstellt am...
+school.room.createuser = Erstellt von...
+school.room.updatedate = Aktualisiert am..
+school.room.updateuser = Aktualisiert von...
+school.room.uuid = UUID
+school.room.url = Vorschau
+
+# Schulfächer
+school.subject.table = 🎒 Schulfächer
+school.subject.name = Fachname
+school.subject.art_id = Art-ID
+school.subject.status = Status
+school.subject.createdate = Erstellt am...
+school.subject.createuser = Erstellt von...
+school.subject.updatedate = Aktualisiert am..
+school.subject.updateuser = Aktualisiert von...
+school.subject.uuid = UUID
+school.subject.url = Vorschau
+
+# Lehrer*innen und Kollegium
+school.team.table = 🎒 Kollegium
+school.team.title = Titel
+school.team.createdate = Erstellungsdatum
+school.team.gender = Geschlecht
+school.team.status = Status
+school.team.academic_title = Zusätzlicher Titel
+school.team.firstname = Vorname
+school.team.lastname = Nachname
+school.team.kuerzel = Kürzel
+school.team.job = Job
+school.team.sonder = Sonderaufgaben
+school.team.is_teacher = Ist Lehrer*in?
+school.team.email = E-Mail
+school.team.image = Bild
+school.team.course_ids = Kurse
+school.team.description = Beschreibung
+school.team.team_tag_ids = Team-Kategorien
+school.team.createuser = Erstellt von...
+school.team.createdate = Erstellt am...
+school.team.updatedate = Aktualisiert am..
+school.team.updateuser = Aktualisiert von...
+school.team.uuid = UUID
+school.team.url = Vorschau
+school.team.index_title = Zusammengesetzer Name
+
+# Organigramm Zuordnung von Abteilungen und Lehrer*innen / Verantwortlichen
+# rex_school_team_tag
+school.team_tag.table = 🎒 Kategorien
+school.team_tag.name = Name / Liste
+school.team_tag.description = Beschreibung
+school.team_tag.prio = Reihenfolge
+school.team_tag.article_id = Link zur Seite
+school.team_tag.status = Status
+school.team_tag.team_id_fav = Leitung
+school.team_tag.team_ids = Kollegium
+school.team_tag.createdate = Erstellt am...
+school.team_tag.createuser = Erstellt von...
+school.team_tag.updatedate = Aktualisiert am..
+school.team_tag.updateuser = Aktualisiert von...
+school.team_tag.uuid = UUID
+
+# Einstellungsseiten
+
+school_editor = Editor
