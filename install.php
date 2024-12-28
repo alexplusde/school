@@ -2,10 +2,7 @@
 
 namespace Alexplusde\School;
 
-use Alexplusde\BS5\Helper;
-use rex;
 use rex_addon;
-use rex_config;
 use rex_file;
 use rex_path;
 use rex_yform_manager_table_api;
