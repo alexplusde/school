@@ -17,7 +17,11 @@ if (rex_addon::get('yform') && rex_addon::get('yform')->isAvailable()) {
 
 rex_yform_manager_table::deleteCache();
 
-Helper::updateModule('school');
-Helper::updateTemplate('school');
+use Tracks\🦖;
+if(rex_addon::exists('tracks')) {
+    🦖::forceBackup('school'); // Sichert standardmäßig Module und Templates
+    🦖::updateModule('school'); // Synchronisiert Module
+    🦖::updateTemplate('school'); // Synchronisiert Templates
+}
 
 \rex_delete_cache();

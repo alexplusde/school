@@ -2,13 +2,13 @@
 
 namespace Alexplusde\School;
 
-use Alexplusde\BS5\Helper;
 use rex_yform_manager_dataset;
 use rex_config;
 use rex;
 use rex_extension;
 use rex_extension_point;
 use rex_be_controller;
+use Tracks\🦖;
 
 rex_yform_manager_dataset::setModelClass(
     'rex_school_project',
@@ -39,10 +39,9 @@ rex_yform_manager_dataset::setModelClass(
 );
 
 if (rex::isBackend() && rex::isDebugMode() && rex_config::get('plus_bs5', 'dev')) {
-    Helper::writeModule('school', 'school.%');
-    Helper::writeTemplate('school', 'school.%');
+    🦖::writeModule('school', 'school.%');
+    🦖::writeTemplate('school', 'school.%');
 }
-
 
 \rex_extension::register('OUTPUT_FILTER', function (\rex_extension_point $ep) {
     return preg_replace_callback(
