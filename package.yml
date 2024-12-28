@@ -11,7 +11,7 @@ requires:
         plus_bs5: ">=0,<2"
         yform: "^4"
         yform_spam_protection: ">=1"
-        yform_fields: ">=1"
+        yform_field: ">=1"
         events: ">=5,<7"
         tracks: "^4.0"
 
