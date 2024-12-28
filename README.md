@@ -1,4 +1,4 @@
-# School Addon für weiterbildende Schulen und Gymnasien
+# School REDAXO-Addon für weiterbildende Schulen und Gymnasien
 
 Ein REDAXO-Addon für einen Schul-Webauftritt von weiterbildenden Schulen und Gymnasien.
 
