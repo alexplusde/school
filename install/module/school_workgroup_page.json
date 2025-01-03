@@ -1,1 +1,13 @@
-{"id":14,"key":"school.workgroup.page","name":"translate:school.module.workgroup.page","createdate":"2017-05-11 15:54:43","createuser":"aw@alexplus.de","updatedate":"2024-12-14 18:16:49","updateuser":"mail@alexplus.de","attributes":"","revision":0}
+{
+    "id": 14,
+    "key": "school.workgroup.page",
+    "name": "translate:school.module.workgroup.page",
+    "createdate": "2024-12-25 18:14:15",
+    "createuser": "plus_bs5",
+    "updatedate": "2024-12-25 18:14:15",
+    "updateuser": "plus_bs5",
+    "attributes": "",
+    "revision": 0,
+    "modulsuche_module_thumbnail": "",
+    "modulsuche_module_description": ""
+}
