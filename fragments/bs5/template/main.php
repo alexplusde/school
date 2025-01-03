@@ -4,6 +4,7 @@ namespace Alexplusde\School;
 
 /** @var rex_fragment $this */
 
+use Alexplusde\BS5\Fragment;
 use rex_article;
 
 $content1 = $this->getVar('content1');
@@ -22,13 +23,19 @@ if ($content2 === '') {
 <main id="content" class="container">
     <article class="row">
         <div class="<?= $class_content1 ?>">
-            <h1 class="mt-5 mb-3"><?= rex_article::getCurrent()->getName() ?></h1>
-            <?php
-            // Wenn YRewrite SEO-Description, dann diese ausgeben
-            if (rex_article::getCurrent()->getValue('yrewrite_description') != '') {
-                echo '<p>' . rex_article::getCurrent()->getValue('yrewrite_description') . '</p>';
-            }
-            ?>
+        <?php
+if (rex_article::getCurrent()->getValue('art_hide_intro') !== "1") {
+   $output = new Fragment();
+
+    $output->setVar('title', rex_article::getCurrent()->getName(), false);
+    $output->setVar('teaser', rex_article::getCurrent()->getValue('yrewrite_description'), false);
+
+    /* REX_MEDIA */
+    $output->setVar('image', rex_article::getCurrent()->getValue('yrewrite_image'));
+
+    echo $output->parse('bs5/template/main-intro.php');
+}
+?>
             <?php echo $this->getVar('content1') ?>
         </div>
         <aside class="<?= $class_content2 ?>">
