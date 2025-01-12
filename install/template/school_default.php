@@ -33,6 +33,7 @@ $fragment->setVar('content', $fragment->getVar('content1') . $fragment->getVar('
         <script src="<?= speed_up_asset::getUrl('addons/project/js/bootstrap.bundle.min.js') ?>"></script>
         <script src="<?= speed_up_asset::getUrl("addons/school/js/jquery-3.7.1.min.js") ?>"></script>
         <script src="<?= speed_up_asset::getUrl("addons/school/js/jquery.magnific-popup.min.js") ?>"></script>
+        <script src="<?= speed_up_asset::getUrl("addons/plus_bs5/js/darkmode-toggle.js") ?>"></script>
         <?php Template::showCss() ?>
         <!--<script src="<?= speed_up_asset::getUrl('addons/plyr/vendor/plyr/dist/plyr.min.js') ?>"></script>-->
         <!--<script src="<?= speed_up_asset::getUrl('addons/plyr/plyr_init.js') ?>"></script>-->
