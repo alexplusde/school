@@ -19,9 +19,9 @@ class Team extends \rex_yform_manager_dataset
     public function getFullName()
     {
         if (strlen($this->getFirstname() > 0)) {
-            return $this->getAcademicTitle() . " ". substr($this->getFirstname(), 0, 1) .". ". $this->getlastname();
+            return $this->getAcademicTitle() . " ". substr($this->getFirstname(), 0, 1) .". ". $this->getLastname();
         }
-        return $this->getAcademicTitle() . " ". $this->getlastname();
+        return $this->getAcademicTitle() . " ". $this->getLastname();
     }
     public function getAnrede()
     {
@@ -109,14 +109,14 @@ class Team extends \rex_yform_manager_dataset
 
     /* Nachname */
     /** @api */
-    public function getlastname() : mixed
+    public function getLastname() : mixed
     {
-        return $this->getValue("name");
+        return $this->getValue("lastname");
     }
     /** @api */
     public function setLastname(mixed $value) : self
     {
-        $this->setValue("name", $value);
+        $this->setValue("lastname", $value);
         return $this;
     }
 

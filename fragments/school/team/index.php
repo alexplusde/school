@@ -10,7 +10,7 @@ use Alexplusde\BS5\Helper;
 $teachers = Team::query()
     ->alias('t')
     ->where('t.is_teacher', '1')
-    ->orderBy('t.name')
+    ->orderBy('t.lastname')
     ->find();
 
 $subjects = [];
